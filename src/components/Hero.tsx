@@ -13,8 +13,8 @@ const Hero = () => {
       ctaText="Start Learning"
       ctaHref="#features"
       bottomImage={{
-        light: "https://www.launchuicomponents.com/app-light.png",
-        dark: "https://www.launchuicomponents.com/app-dark.png",
+        light: "work.png",
+        dark: "work.png",
       }}
     />
   );
