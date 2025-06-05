@@ -46,68 +46,6 @@ const Index = () => {
             href: "https://github.com/neurosnap",
           },
         ]}
-        columns={[
-          {
-            title: "Product",
-            links: [
-              {
-                name: "Features",
-                Icon: Brain,
-                href: "#features",
-              },
-              {
-                name: "Study Tools",
-                Icon: BookOpen,
-                href: "#features",
-              },
-              {
-                name: "Community",
-                Icon: Users,
-                href: "#contact",
-              },
-              {
-                name: "Early Access",
-                Icon: Mail,
-                href: "#contact",
-              },
-            ],
-          },
-          {
-            title: "Support",
-            links: [
-              {
-                name: "Help Center",
-                Icon: MessageCircle,
-                href: "/support",
-              },
-              {
-                name: "Documentation",
-                Icon: FileText,
-                href: "/docs",
-              },
-              {
-                name: "Contact Us",
-                Icon: Mail,
-                href: "#contact",
-              },
-            ],
-          },
-          {
-            title: "Legal",
-            links: [
-              {
-                name: "Privacy Policy",
-                Icon: Shield,
-                href: "/privacy",
-              },
-              {
-                name: "Terms of Service",
-                Icon: Handshake,
-                href: "/terms",
-              },
-            ],
-          },
-        ]}
         copyright="© 2024 NeuroSnap. All rights reserved. Revolutionizing education through AI."
       />
       <Toaster />
