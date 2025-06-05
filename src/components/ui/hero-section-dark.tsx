@@ -1,4 +1,3 @@
-
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { ChevronRight } from "lucide-react"
@@ -83,36 +82,26 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         <section className="relative max-w-full mx-auto z-1">
           <RetroGrid {...gridOptions} />
           <div className="max-w-screen-xl z-10 mx-auto px-4 py-28 gap-12 md:px-8">
-            <div className="space-y-5 max-w-3xl leading-0 lg:leading-5 mx-auto text-center">
-              <h1 className="text-sm text-gray-600 dark:text-gray-400 group font-geist mx-auto px-5 py-2 bg-gradient-to-tr from-zinc-300/20 via-gray-400/20 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 border-[2px] border-black/5 dark:border-white/5 rounded-3xl w-fit">
+            <div className="space-y-8 max-w-4xl leading-0 lg:leading-5 mx-auto text-center">
+              <h1 className="text-lg md:text-xl text-gray-600 dark:text-gray-400 group font-geist mx-auto px-6 py-3 bg-gradient-to-tr from-zinc-300/20 via-gray-400/20 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 border-[2px] border-black/5 dark:border-white/5 rounded-3xl w-fit">
                 {title}
-                <ChevronRight className="inline w-4 h-4 ml-2 group-hover:translate-x-1 duration-300" />
+                <ChevronRight className="inline w-5 h-5 ml-2 group-hover:translate-x-1 duration-300" />
               </h1>
-              <h2 className="text-4xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto md:text-6xl bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
-                {subtitle.regular}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
+              <div className="space-y-2">
+                <div className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center whitespace-nowrap overflow-hidden text-ellipsis">
+                  {subtitle.regular}
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 text-center">
                   {subtitle.gradient}
-                </span>
-              </h2>
-              <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+                </div>
+              </div>
+              <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-xl md:text-2xl leading-relaxed">
                 {description}
               </p>
-              <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-                <span className="relative inline-block overflow-hidden rounded-full p-[1.5px]">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                  <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl">
-                    <a
-                      href={ctaHref}
-                      className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all sm:w-auto py-4 px-10"
-                    >
-                      {ctaText}
-                    </a>
-                  </div>
-                </span>
-              </div>
+              {props.children}
             </div>
             {bottomImage && (
-              <div className="mt-32 mx-10 relative z-10">
+              <div className="mt-40 mx-10 relative z-10">
                 <img
                   src={bottomImage.light}
                   className="w-full shadow-lg rounded-lg border border-gray-200 dark:hidden"
