@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { ChevronRight } from "lucide-react"
@@ -82,23 +83,20 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         <section className="relative max-w-full mx-auto z-1">
           <RetroGrid {...gridOptions} />
           <div className="max-w-screen-xl z-10 mx-auto px-4 py-28 gap-12 md:px-8">
-            <div className="space-y-10 max-w-4xl leading-0 lg:leading-5 mx-auto text-center">
-              <h1 className="text-lg md:text-xl text-gray-600 dark:text-gray-400 group font-geist mx-auto px-6 py-3 bg-gradient-to-tr from-zinc-300/20 via-gray-400/20 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 border-[2px] border-black/5 dark:border-white/5 rounded-3xl w-fit mb-2">
+            <div className="space-y-8 max-w-4xl leading-0 lg:leading-5 mx-auto text-center">
+              <h1 className="text-lg md:text-xl text-gray-600 dark:text-gray-400 group font-geist mx-auto px-6 py-3 bg-gradient-to-tr from-zinc-300/20 via-gray-400/20 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 border-[2px] border-black/5 dark:border-white/5 rounded-3xl w-fit">
                 {title}
                 <ChevronRight className="inline w-5 h-5 ml-2 group-hover:translate-x-1 duration-300" />
               </h1>
-              <div className="space-y-3">
-                <div className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white text-center whitespace-nowrap overflow-hidden text-ellipsis">
-                  {subtitle.regular}
-                </div>
-                <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 text-center">
+              <h2 className="text-5xl md:text-7xl lg:text-8xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                {subtitle.regular}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
                   {subtitle.gradient}
-                </div>
-              </div>
-              <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-2xl md:text-3xl leading-relaxed mt-6 mb-4">
+                </span>
+              </h2>
+              <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-xl md:text-2xl leading-relaxed">
                 {description}
               </p>
-              <div className="mt-8">{props.children}</div>
             </div>
             {bottomImage && (
               <div className="mt-40 mx-10 relative z-10">

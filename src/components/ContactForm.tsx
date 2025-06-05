@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -36,6 +35,7 @@ const ContactForm = () => {
       toast({
         title: "Welcome to NeuroSnap! 🧠✨",
         description: "Thank you for joining! We'll send you early access details and personalized study tips soon.",
+        className: "bg-gradient-to-r from-purple-600 to-pink-500 text-white border-none",
       });
       setFormData({ name: '', email: '', school: '', studyHours: '', subjects: '', challenges: '', goals: '' });
     } catch (error) {
@@ -62,7 +62,7 @@ const ContactForm = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 animate-fade-in">
           <div className="flex items-center justify-center mb-6">
-            <div className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-full">
+            <div className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-full">
               <Sparkles className="w-4 h-4" />
               <span className="text-sm font-medium">Early Access</span>
             </div>
@@ -90,7 +90,7 @@ const ContactForm = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="bg-background border-border focus:border-primary rounded-xl"
+                  className="bg-background border-border focus:border-purple-500 rounded-xl"
                   placeholder="John Doe"
                 />
               </div>
@@ -106,7 +106,7 @@ const ContactForm = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="bg-background border-border focus:border-primary rounded-xl"
+                  className="bg-background border-border focus:border-purple-500 rounded-xl"
                   placeholder="john@university.edu"
                 />
               </div>
@@ -124,7 +124,7 @@ const ContactForm = () => {
                   type="text"
                   value={formData.school}
                   onChange={handleChange}
-                  className="bg-background border-border focus:border-primary rounded-xl"
+                  className="bg-background border-border focus:border-purple-500 rounded-xl"
                   placeholder="Harvard University"
                 />
               </div>
@@ -138,7 +138,7 @@ const ContactForm = () => {
                   name="studyHours"
                   value={formData.studyHours}
                   onChange={handleChange}
-                  className="w-full bg-background border border-border focus:border-primary rounded-xl px-3 py-2 text-sm text-foreground"
+                  className="w-full bg-background border border-border focus:border-purple-500 rounded-xl px-3 py-2 text-sm text-foreground"
                 >
                   <option value="">Select hours</option>
                   <option value="1-2">1-2 hours</option>
@@ -159,7 +159,7 @@ const ContactForm = () => {
                 type="text"
                 value={formData.subjects}
                 onChange={handleChange}
-                className="bg-background border-border focus:border-primary rounded-xl"
+                className="bg-background border-border focus:border-purple-500 rounded-xl"
                 placeholder="e.g., Computer Science, Medicine, Business, Engineering"
               />
             </div>
@@ -173,7 +173,7 @@ const ContactForm = () => {
                 name="challenges"
                 value={formData.challenges}
                 onChange={handleChange}
-                className="bg-background border-border focus:border-primary rounded-xl min-h-[100px] resize-none"
+                className="bg-background border-border focus:border-purple-500 rounded-xl min-h-[100px] resize-none"
                 placeholder="e.g., Difficulty concentrating, information retention, time management, exam anxiety..."
               />
             </div>
@@ -187,7 +187,7 @@ const ContactForm = () => {
                 name="goals"
                 value={formData.goals}
                 onChange={handleChange}
-                className="bg-background border-border focus:border-primary rounded-xl min-h-[100px] resize-none"
+                className="bg-background border-border focus:border-purple-500 rounded-xl min-h-[100px] resize-none"
                 placeholder="e.g., Improve grades, faster learning, better retention, exam preparation..."
               />
             </div>
@@ -195,11 +195,11 @@ const ContactForm = () => {
             <Button 
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-70"
+              className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-3 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-70"
             >
               {isSubmitting ? (
                 <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin"></div>
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                   Processing...
                 </div>
               ) : (
