@@ -1,7 +1,6 @@
 
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import ContactForm from "@/components/ContactForm";
 import { Footer } from "@/components/ui/footer";
@@ -18,12 +17,13 @@ import {
   Twitter,
   Linkedin
 } from "lucide-react";
+import { HeroSection } from "@/components/Hero";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <Hero />
+      <HeroSection />
       <Features />
       <ContactForm />
       <Footer
