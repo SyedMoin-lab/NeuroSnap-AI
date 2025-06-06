@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -27,7 +26,12 @@ const Header = () => {
         data-state={isMenuOpen && 'active'}
         className="fixed z-20 w-full px-2 group"
       >
-        <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
+        <div
+          className={cn(
+            'mx-auto mt-2 w-full max-w-6xl px-6 transition-all duration-300 lg:px-12 bg-background/50 rounded-2xl border backdrop-blur-lg',
+            isScrolled && 'max-w-4xl lg:px-5'
+          )}
+        >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full justify-between lg:w-auto">
               <a
